@@ -8,24 +8,24 @@ public class LinearSearchInString {
         System.out.println(search2(name, target));
     }
 
-    static boolean search(String s, char target){
-        if (s.isEmpty()){
+    static boolean search(String s, char target) {
+        if (s.isEmpty()) {
             return false;
         }
-        for(char element : s.toCharArray()){
-            if (element==target)
+        for (char element : s.toCharArray()) {
+            if (element == target)
                 return true;
         }
         return false;
     }
 
     //second way
-    static boolean search2(String s, char target){
-        if (s.isEmpty()){
+    static boolean search2(String s, char target) {
+        if (s.isEmpty()) {
             return false;
         }
-        for(int i=0; i<s.length(); i++){
-            if (target== s.charAt(i)){
+        for (int i = 0; i < s.length(); i++) {
+            if (target == s.charAt(i)) {
                 return true;
             }
         }

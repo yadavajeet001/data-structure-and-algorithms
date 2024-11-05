@@ -7,8 +7,8 @@ public class MajorityElement {
     public static int majorityElement(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;
-        System.out.println(nums[n/2]);
-        return nums[n/2];
+        System.out.println(nums[n / 2]);
+        return nums[n / 2];
     }
 
     public static void main(String[] args) {

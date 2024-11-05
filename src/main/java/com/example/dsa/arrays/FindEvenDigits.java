@@ -2,7 +2,7 @@ package com.example.dsa.arrays;
 
 public class FindEvenDigits {
     public static void main(String[] args) {
-        int[] arr = {12, 23, 4 , 234, 4533, 4};
+        int[] arr = {12, 23, 4, 234, 4533, 4};
         int res = findEvenDigit(arr);
         System.out.println(res);
         System.out.println(digits2());
@@ -10,10 +10,10 @@ public class FindEvenDigits {
 
     private static int findEvenDigit(int[] arr) {
         int count = 0;
-        for (int num : arr){
-          if (even(num)){
-              count++;
-          }
+        for (int num : arr) {
+            if (even(num)) {
+                count++;
+            }
         }
         return count;
     }
@@ -24,10 +24,10 @@ public class FindEvenDigits {
     }
 
     private static int digits(int num) {
-        int count =0;
-        while (num>0){
+        int count = 0;
+        while (num > 0) {
             count++;
-            num = num/10;
+            num = num / 10;
         }
         return count;
     }
@@ -36,5 +36,4 @@ public class FindEvenDigits {
     private static int digits2() {
         return (int) (Math.log10(35353) + 1);
     }
-
 }
