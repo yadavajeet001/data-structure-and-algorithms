@@ -3,7 +3,7 @@ package com.example.dsa.arrays;
 //LeetCode easy
 //Time Complexity O(n) and space complexity 0(1)
 public class BestTimeToBuyAndSellStock {
-        public static int maxProfit(int[] prices) {
+        public static void maxProfit(int[] prices) {
             int min_price = prices[0];
             int maxprof = 0;
 
@@ -12,7 +12,6 @@ public class BestTimeToBuyAndSellStock {
                 min_price = Math.min(prices[i], min_price);
             }
             System.out.println(maxprof);
-            return maxprof;
         }
 
     public static void main(String[] args) {
