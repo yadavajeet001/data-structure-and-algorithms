@@ -24,9 +24,17 @@ public class BinarySearchSortedArray {
             } else if (target > arr[mid]) {
                 start = mid + 1;
             } else {
+
+                //target element found
                 return mid;
             }
         }
+        //target element not found in array
+
+               return mid;
+            }
+        }
+
         return -1;
     }
 }

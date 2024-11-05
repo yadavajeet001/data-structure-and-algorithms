@@ -1,6 +1,5 @@
 package com.example.dsa.linearsearch;
 
-
 public class FindMaxIn2DArray {
     public static void main(String[] args) {
 
