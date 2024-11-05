@@ -1,4 +1,4 @@
-package leetcode.arrays;
+package com.example.dsa.arrays;
 
 //LeetCode easy
 public class RemoveElement {

@@ -1,4 +1,4 @@
-package binarysearch;
+package com.example.dsa.binarysearch;
 
 
 public class BinarySearchSortedArray {

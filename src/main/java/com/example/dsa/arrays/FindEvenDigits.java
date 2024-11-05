@@ -1,4 +1,4 @@
-package leetcode.arrays;
+package com.example.dsa.arrays;
 
 public class FindEvenDigits {
     public static void main(String[] args) {

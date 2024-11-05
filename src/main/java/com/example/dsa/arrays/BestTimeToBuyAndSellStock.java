@@ -1,4 +1,4 @@
-package leetcode.arrays;
+package com.example.dsa.arrays;
 
 //LeetCode easy
 //Time Complexity O(n) and space complexity 0(1)

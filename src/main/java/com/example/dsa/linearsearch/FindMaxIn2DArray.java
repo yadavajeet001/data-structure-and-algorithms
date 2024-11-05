@@ -1,6 +1,5 @@
-package linearsearch;
+package com.example.dsa.linearsearch;
 
-import java.util.Arrays;
 
 public class FindMaxIn2DArray {
     public static void main(String[] args) {
