@@ -19,7 +19,7 @@ public class SelectionSortExample {
 
     private static int findMaxElement(int[] array, int start, int end) {
         int max = start;
-        for (int i = 0; i < end; i++) {
+        for (int i = start; i <= end; i++) {
             if (array[max] < array[i]) {
                 max = i;
             }
@@ -35,7 +35,7 @@ public class SelectionSortExample {
 
     public static void main(String[] args) {
 
-        int[] arr = {4, 5, 1, 2, 3};
+        int[] arr = {-21, 5, 1, 2, 3};
         selectionSort(arr);
         System.out.println(Arrays.toString(arr));
     }
