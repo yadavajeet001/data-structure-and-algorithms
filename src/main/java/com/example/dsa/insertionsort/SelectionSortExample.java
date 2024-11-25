@@ -2,6 +2,12 @@ package com.example.dsa.insertionsort;
 
 import java.util.Arrays;
 
+/**
+ * Space Complexity - O(1)
+ * Time complexity
+ * Best case - O(n^2)
+ * Worst case - O(n^2)
+ */
 public class SelectionSortExample {
 
     static void selectionSort(int[] array) {
