@@ -35,7 +35,7 @@ public class SelectionSortExample {
 
     public static void main(String[] args) {
 
-        int[] arr = {-21, 5, 1, 2, 3};
+        int[] arr = {4, 5, 1, 2, 3};
         selectionSort(arr);
         System.out.println(Arrays.toString(arr));
     }
