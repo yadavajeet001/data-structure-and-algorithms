@@ -1,4 +1,4 @@
-package com.example.dsa.insertionsort;
+package com.example.dsa.selectionsort;
 
 import java.util.Arrays;
 
