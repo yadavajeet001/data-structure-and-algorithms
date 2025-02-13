@@ -1,6 +1,5 @@
 package com.example.dsa.queue;
 
-//time complexity - O(n
 public class CustomQueueMain {
     public static void main(String[] args) throws CustomQueueException {
         CustomQueue queue = new CustomQueue(5);

@@ -1,5 +1,6 @@
 package com.example.dsa.queue;
 
+//time complexity - O(n)
 public class CustomQueue {
 
     protected int[] data;
