@@ -15,12 +15,11 @@ public class CustomQueue {
         this.data = new int[size];
     }
 
-    public int insert(int item) throws CustomQueueException {
+    public void insert(int item) throws CustomQueueException {
         if (end == data.length) {
             throw new CustomQueueException("Queue is full");
         }
         data[end++] = item;
-        return item;
     }
 
     public int remove() throws CustomQueueException {

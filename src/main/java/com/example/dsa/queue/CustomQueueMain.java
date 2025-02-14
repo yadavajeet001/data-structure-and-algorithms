@@ -15,5 +15,16 @@ public class CustomQueueMain {
         System.out.println("front " + queue.front());
         System.out.println("remove " + queue.remove());
         queue.display();
+
+        //custom dynamic queue
+        CustomDynamicCircularQueue dynamicQueue = new CustomDynamicCircularQueue(5);
+        dynamicQueue.insert(1);
+        dynamicQueue.insert(2);
+        dynamicQueue.insert(3);
+        dynamicQueue.insert(4);
+        dynamicQueue.insert(5);
+        dynamicQueue.insert(6);
+        dynamicQueue.insert(7);
+        dynamicQueue.display();
     }
 }
