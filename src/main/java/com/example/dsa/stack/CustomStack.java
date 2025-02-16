@@ -14,13 +14,12 @@ public class CustomStack {
         this.data = new int[ size ];
     }
 
-    public int push(int item) throws CustomStackException {
+    public void push(int item) throws CustomStackException {
         if (ptr == data.length-1) {
             throw new CustomStackException("Stack is full");
         }
         ptr++;
         data[ptr] = item;
-        return item;
     }
 
     public int pop() throws CustomStackException {

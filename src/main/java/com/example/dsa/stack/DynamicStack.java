@@ -11,7 +11,7 @@ public class DynamicStack extends CustomStack {
     }
 
     @Override
-    public int push(int item) {
+    public void push(int item) {
         if (ptr == data.length - 1) {
             int[] temp = new int[data.length * 2];
             System.arraycopy(data, 0, temp, 0, data.length);
@@ -23,7 +23,6 @@ public class DynamicStack extends CustomStack {
         }
         ptr++;
         data[ptr] = item;
-        return item;
         //or
         //return super.push(item);
     }
