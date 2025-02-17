@@ -28,7 +28,7 @@ public class MinimumAddToMakeParenthesis {
     public static void main(String[] args) {
         String string = "())"; //output: 1
         String string1 = "((("; //output: 3
-        String string2 = "()"; //output: 0
+        String string2 = "))"; //output: 2
         int result = minAddToMakeValid(string2);
         System.out.println("Minimum Add to Make Parenthesis Valid: " + result);
     }
