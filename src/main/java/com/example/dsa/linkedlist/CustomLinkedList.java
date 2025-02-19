@@ -6,8 +6,9 @@ public class CustomLinkedList {
         customLinkedList.addFirst(10);
         customLinkedList.addFirst(20);
         customLinkedList.addFirst(30);
+        customLinkedList.addFirst(40);
         customLinkedList.display();
-        customLinkedList.addLast(40);
+        customLinkedList.addLast(50);
         customLinkedList.display();
         customLinkedList.insert(25, 2);
         customLinkedList.display();
@@ -15,7 +16,7 @@ public class CustomLinkedList {
         customLinkedList.display();
         customLinkedList.deleteLast();
         customLinkedList.display();
-        customLinkedList.delete(1);
+        customLinkedList.delete(2);
         customLinkedList.display();
         System.out.println(customLinkedList.find(25));
         customLinkedList.display();
@@ -38,11 +39,6 @@ public class CustomLinkedList {
 
         public Node(int data) {
             this.data = data;
-        }
-
-        public Node(int data, Node next) {
-            this.data = data;
-            this.next = next;
         }
     }
 
@@ -81,7 +77,7 @@ public class CustomLinkedList {
             return;
         }
         Node temp = head;
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < index - 1; i++) {
             temp = temp.next;
         }
         Node newNode = new Node(data);
@@ -161,7 +157,7 @@ public class CustomLinkedList {
     private void display() {
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.data + "->");
+            System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
         System.out.println("END");
