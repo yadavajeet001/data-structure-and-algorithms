@@ -1,7 +1,7 @@
 package com.example.dsa.linkedlist;
 
 /**
- * Easy
+ * LeetCode - Easy
  * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
  * Delete duplicates from a sorted linked list
  * Input: 1->1->2
