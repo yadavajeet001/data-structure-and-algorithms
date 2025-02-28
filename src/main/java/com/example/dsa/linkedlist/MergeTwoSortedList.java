@@ -60,6 +60,7 @@ public class MergeTwoSortedList {
 //        }
 //    }
 
+    //merge two sorted list
     private static MergeTwoSortedList mergeTwoLists(MergeTwoSortedList list1, MergeTwoSortedList list2) {
         Node first = list1.head;
         Node second = list2.head;
