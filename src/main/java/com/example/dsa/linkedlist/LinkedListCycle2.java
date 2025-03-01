@@ -56,6 +56,13 @@ public class LinkedListCycle2 {
             if (fast == slow) {
                 //first step - find the length of the cycle
                 length = findLength(slow);
+                //or
+//                ListNode temp = slow;
+//                do {
+//                    temp = temp.next;
+//                    length++;
+//                } while (temp != slow);
+
                 break;
             }
         }
