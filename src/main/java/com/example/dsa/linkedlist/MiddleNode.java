@@ -68,7 +68,7 @@ public class MiddleNode {
         System.out.println();
     }
 
-    //Leetcode Solution
+    //LeetCode Solution
     private ListNode middleNode(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
