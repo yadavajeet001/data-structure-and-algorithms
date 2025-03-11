@@ -28,7 +28,6 @@ public class ReverseLinkedList {
     }
 
     private static ListNode head;
-    private static ListNode tail;
 
     // Definition for singly-linked list.
     public static class ListNode {
