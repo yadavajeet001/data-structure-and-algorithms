@@ -79,6 +79,7 @@ public class ReverseLinkedList2 {
 
         //reverse between left and right
         ListNode last = prev;
+        //newEnd of the reversed list
         ListNode newEnd = present;
         assert present != null;
         ListNode next = present.next;
