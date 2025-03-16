@@ -7,6 +7,8 @@ package com.example.dsa.linkedlist;
  * and return the modified list.
  * Input: head = [1,2,3,4,5,6], k = 2
  * Output: [2,1,3,4,6,5]
+ * Space complexity - O(1)
+ * Time complexity - O(n)
  */
 public class ReverseKGroupAndSkipKGroup {
     public static void main(String[] args) {
