@@ -15,14 +15,22 @@ package com.example.dsa.linkedlist;
 public class RotateLinkedListKTimes {
     public static void main(String[] args) {
         RotateLinkedListKTimes rotateLinkedListKTimes = new RotateLinkedListKTimes();
-        rotateLinkedListKTimes.addFirst(6);
-        rotateLinkedListKTimes.addFirst(5);
-        rotateLinkedListKTimes.addFirst(4);
-        rotateLinkedListKTimes.addFirst(3);
+//        rotateLinkedListKTimes.addFirst(6);
+//        rotateLinkedListKTimes.addFirst(5);
+//        rotateLinkedListKTimes.addFirst(4);
+//        rotateLinkedListKTimes.addFirst(3);
+//        rotateLinkedListKTimes.addFirst(2);
+//        rotateLinkedListKTimes.addFirst(1);
+//        rotateLinkedListKTimes.display(head);
+//        int k = 2;
+
+
         rotateLinkedListKTimes.addFirst(2);
         rotateLinkedListKTimes.addFirst(1);
+        rotateLinkedListKTimes.addFirst(0);
         rotateLinkedListKTimes.display(head);
-        int k = 2;
+        int k = 4;
+
         ListNode result = rotateLinkedListKTimes.rotateRight(head, k);
         rotateLinkedListKTimes.display(result);
     }
@@ -66,13 +74,13 @@ public class RotateLinkedListKTimes {
 
     public ListNode rotateRight(ListNode head, int k) {
 
-        if (k <= 0 || head == null || head.next == null) {
+        if (k < 1 || head == null || head.next == null) {
             return head;
         }
 
         ListNode lastNode = head;
 
-        int length = 0;
+        int length = 1;
 
         //find the last node
         while (lastNode.next != null) {
@@ -92,7 +100,7 @@ public class RotateLinkedListKTimes {
         ListNode newEnd = head;
 
         //skip the elements
-        for (int i = 0; i < skip; i++) {
+        for (int i = 0; i < skip - 1; i++) {
             newEnd = newEnd.next;
         }
 
