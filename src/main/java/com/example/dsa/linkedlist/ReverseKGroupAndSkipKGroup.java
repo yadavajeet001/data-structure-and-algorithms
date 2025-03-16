@@ -63,6 +63,10 @@ public class ReverseKGroupAndSkipKGroup {
     //LeetCode Solution
     private ListNode reverseKGroupAndSkipKGroup(ListNode head, int k) {
 
+        if (k < 1 || head == null) {
+            return head;
+        }
+
         ListNode prev = null;
         ListNode present = head;
 
