@@ -21,12 +21,23 @@ package com.example.dsa.arrays;
 public class FindMinInRotatingArray {
     public static void main(String[] args) {
         int[] nums = {3, 4, 5, 1, 2};
-        int result = findMin(nums);
+        int result = findMin1(nums);
         System.out.println(result);
+        int result2 = findMin2(nums);
+        System.out.println(result2);
     }
 
-    //Binary search - Time complexity - O(log n), Space Complexity - O(1)
-    public static int findMin(int[] nums) {
+    //Linear Search - Brute Force Approach, Time complexity - O(n), Space Complexity - O(1)
+    public static int findMin1(int[] nums) {
+        int min = Integer.MAX_VALUE;
+        for (int num : nums) {
+            min = Math.min(min, num);
+        }
+        return min;
+    }
+
+    //Binary search - Optimal solution, Time complexity - O(log n), Space Complexity - O(1)
+    public static int findMin2(int[] nums) {
         int start = 0;
         int end = nums.length - 1;
         while (start < end) {
