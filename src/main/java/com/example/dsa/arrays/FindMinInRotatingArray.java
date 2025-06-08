@@ -37,7 +37,86 @@ public class FindMinInRotatingArray {
     }
 
     //Binary search - Optimal solution, Time complexity - O(log n), Space Complexity - O(1)
+
+    /**
+     * Time Complexity: O(logN), N = size of the given array.
+     * Reason: We are basically using binary search to find the minimum.
+     * Space Complexity: O(1)
+     * Reason: We have not used any extra data structures, this makes space complexity, even in the worst case as O(1).
+     *
+     * @param nums array
+     * @return int
+     */
     public static int findMin2(int[] nums) {
+        int start = 0;
+        int end = nums.length - 1;
+        int ans = Integer.MAX_VALUE;
+        while (start < end) {
+            int mid = (start + end) / 2;
+
+            //if left part of array is sorted
+            if (nums[start] <= nums[mid]) {
+
+                //keep the minimum leftmost value
+                ans = Math.min(ans, nums[start]);
+
+                //eliminate left half
+                start = mid + 1;
+
+            } else {
+
+                //if right part of array is sorted
+                //keep the minimum leftmost value
+                ans = Math.min(ans, nums[mid]);
+
+                //eliminate right half
+                end = mid - 1;
+            }
+        }
+        return ans;
+    }
+
+    //Note: Though the time complexity of the following code is the same as the previous one,
+    // this code will run slightly faster.
+    public static int findMin3(int[] nums) {
+        int start = 0;
+        int end = nums.length - 1;
+        int ans = Integer.MAX_VALUE;
+        while (start < end) {
+            int mid = (start + end) / 2;
+
+            //search space is already sorted
+            //then nums[start] will always be
+            //the minimum in that search space:
+            if (nums[start] <= nums[end]) {
+                ans = Math.min(ans, nums[start]);
+                break;
+            }
+
+            //if left part of array is sorted
+            if (nums[start] <= nums[mid]) {
+
+                //keep the minimum leftmost value
+                ans = Math.min(ans, nums[start]);
+
+                //eliminate left half
+                start = mid + 1;
+
+            } else {
+
+                //if right part of array is sorted
+                //keep the minimum leftmost value
+                ans = Math.min(ans, nums[mid]);
+
+                //eliminate right half
+                end = mid - 1;
+            }
+        }
+        return ans;
+    }
+
+    //Binary search - Time complexity - O(log n), Space Complexity - O(1)
+    public static int findMin4(int[] nums) {
         int start = 0;
         int end = nums.length - 1;
         while (start < end) {
