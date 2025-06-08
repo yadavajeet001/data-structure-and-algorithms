@@ -20,7 +20,7 @@ package com.example.dsa.arrays;
  */
 public class FindMinInRotatingArray {
     public static void main(String[] args) {
-        int[] nums = {3, 4, 5, 1, 2};
+        int[] nums = {1};
         int result = findMin1(nums);
         System.out.println(result);
         int result2 = findMin2(nums);
@@ -29,6 +29,8 @@ public class FindMinInRotatingArray {
         System.out.println(result3);
         int result4 = findMin4(nums);
         System.out.println(result4);
+        int result5 = findMin4(nums);
+        System.out.println(result5);
     }
 
     //Linear Search - Brute Force Approach, Time complexity - O(n), Space Complexity - O(1)
@@ -55,7 +57,7 @@ public class FindMinInRotatingArray {
         int start = 0;
         int end = nums.length - 1;
         int ans = Integer.MAX_VALUE;
-        while (start < end) {
+        while (start <= end) {
             int mid = (start + end) / 2;
 
             //if left part of array is sorted
@@ -86,7 +88,7 @@ public class FindMinInRotatingArray {
         int start = 0;
         int end = nums.length - 1;
         int ans = Integer.MAX_VALUE;
-        while (start < end) {
+        while (start <= end) {
             int mid = (start + end) / 2;
 
             //search space is already sorted
@@ -119,8 +121,23 @@ public class FindMinInRotatingArray {
         return ans;
     }
 
-    //Binary search - Time complexity - O(log n), Space Complexity - O(1)
+    //Binary search - Optimal solution Time complexity - O(log n), Space Complexity - O(1)
     public static int findMin4(int[] nums) {
+        int start = 0;
+        int end = nums.length - 1;
+        while (start < end) {
+            int mid = start + (end - start) / 2;
+            if (nums[start] <= nums[mid]) {
+                start = mid + 1;
+            } else {
+                end = mid;
+            }
+        }
+        return nums[start];
+    }
+
+    //Binary search - Optimal solution Time complexity - O(log n), Space Complexity - O(1)
+    public static int findMin5(int[] nums) {
         int start = 0;
         int end = nums.length - 1;
         while (start < end) {
