@@ -25,6 +25,10 @@ public class FindMinInRotatingArray {
         System.out.println(result);
         int result2 = findMin2(nums);
         System.out.println(result2);
+        int result3 = findMin3(nums);
+        System.out.println(result3);
+        int result4 = findMin4(nums);
+        System.out.println(result4);
     }
 
     //Linear Search - Brute Force Approach, Time complexity - O(n), Space Complexity - O(1)
