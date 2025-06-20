@@ -2,7 +2,7 @@ package com.example.dsa.arrays;
 
 import java.util.Arrays;
 
-//Time Complexity O(n log n and space complexity O(1)
+//Time Complexity O(n log n) and space complexity O(1)
 public class MajorityElement {
     public static int majorityElement(int[] nums) {
         Arrays.sort(nums);
