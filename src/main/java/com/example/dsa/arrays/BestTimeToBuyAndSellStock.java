@@ -43,7 +43,7 @@ public class BestTimeToBuyAndSellStock {
         return res;
     }
 
-    //Optimal Approach - Two Pointer
+    //Optimal Approach - Sliding Window
     //Time Complexity - O(n)
     //Space Complexity - O(1)
     public static int maxProfit2(int[] prices) {
