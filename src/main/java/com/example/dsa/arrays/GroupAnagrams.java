@@ -21,6 +21,8 @@ public class GroupAnagrams {
         String[] str = {"act", "pots", "tops", "cat", "stop", "hat"};
         List<List<String>> result = groupAnagrams1(str);
         System.out.println(result);
+        List<List<String>> result2 = groupAnagrams2(str);
+        System.out.println(result2);
     }
 
     //Time Complexity - O(m * n log n)
@@ -43,7 +45,7 @@ public class GroupAnagrams {
     //Using HashTable
     //Time Complexity - O(m * n)
     //Space Complexity - O(m * n)
-    public List<List<String>> groupAnagrams2(String[] strs) {
+    public static List<List<String>> groupAnagrams2(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
         for (String s : strs) {
             int[] count = new int[26];
