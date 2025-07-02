@@ -44,16 +44,16 @@ public class GroupAnagrams {
     //Time Complexity - O(m * n)
     //Space Complexity - O(m * n)
     public List<List<String>> groupAnagrams2(String[] strs) {
-        Map<String, List<String>> res = new HashMap<>();
+        Map<String, List<String>> map = new HashMap<>();
         for (String s : strs) {
             int[] count = new int[26];
             for (char c : s.toCharArray()) {
                 count[c - 'a']++;
             }
             String key = Arrays.toString(count);
-            res.putIfAbsent(key, new ArrayList<>());
-            res.get(key).add(s);
+            map.putIfAbsent(key, new ArrayList<>());
+            map.get(key).add(s);
         }
-        return new ArrayList<>(res.values());
+        return new ArrayList<>(map.values());
     }
 }
